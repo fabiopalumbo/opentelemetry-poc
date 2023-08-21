@@ -66,7 +66,7 @@ services:
       - tempo
 
   boot-otel-tempo-provider1:
-    image: "swiftlysandbox.azurecr.io/boot-otel-tempo-provider1:0.0.1-SNAPSHOT"
+    image: "Testsandbox.azurecr.io/boot-otel-tempo-provider1:0.0.1-SNAPSHOT"
     ports:
       - "8090:8090"
     environment:
@@ -80,7 +80,7 @@ services:
       - provider1-db
 
   boot-otel-tempo-api:
-    image: "swiftlysandbox.azurecr.io/boot-otel-tempo-api:0.0.1-SNAPSHOT"
+    image: "Testsandbox.azurecr.io/boot-otel-tempo-api:0.0.1-SNAPSHOT"
     ports:
       - "8080:8080"
     environment:
@@ -101,7 +101,7 @@ services:
       - loki
 
   volume_exporter:
-    image: swiftlysandbox.azurecr.io/volume_exporter
+    image: Testsandbox.azurecr.io/volume_exporter
     command: ["--volume-dir=tempo:/tmp/tempo", "--volume-dir=logs:/app/logs", "--volume-dir=loki:/tmp/loki"]
     volumes:
       - ./data/logs:/app/logs

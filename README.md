@@ -54,7 +54,7 @@ Az login
 
 ```
 az account set --subscription 9b8e09f0-efe4-417a-81c3-f90402519522
-az acr login --name swiftlysandbox
+az acr login --name Testsandbox
 ```
 
 Docker Compose
@@ -375,7 +375,7 @@ spec:
       chart: opentelemetry-collector
       sourceRef:
         kind: HelmRepository
-        name: swiftly
+        name: Test
         namespace: monitoring
       version: 0.40.2
   install: {}
@@ -567,7 +567,7 @@ Also, Tempo enables you for faster debugging/troubleshooting by quickly allowing
 ## Requirements
 
 * An active Azure account
-* Access to Swiftly Sandbox Account
+* Access to Test Sandbox Account
 * Azure credentials 
 * Flux => https://fluxcd.io/flux/installation/
 * AZ CLI => https://github.com/Azure/azure-cli
